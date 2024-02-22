@@ -3,9 +3,17 @@ import SwiftUI
 public
 class VLTrianglePoints: ObservableObject
 {
- @Published var topMiddle: CGPoint = .zero
- @Published var bottomRight: CGPoint = .zero
- @Published var bottomLeft: CGPoint = .zero
+ @Published 
+ public
+ var topMiddle: CGPoint = .zero
+ 
+ @Published
+ public
+ var bottomRight: CGPoint = .zero
+ 
+ @Published 
+ public
+ var bottomLeft: CGPoint = .zero
 }
 
 

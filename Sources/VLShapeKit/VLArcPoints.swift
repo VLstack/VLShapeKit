@@ -3,13 +3,33 @@ import SwiftUI
 public
 class VLArcPoints: ObservableObject
 {
- @Published var center: CGPoint = .zero
- @Published var innerRadius: Double = 0
- @Published var innerStart: CGPoint = .zero
- @Published var innerEnd: CGPoint = .zero
- @Published var outerRadius: Double = 0
- @Published var outerStart: CGPoint = .zero
- @Published var outerEnd: CGPoint = .zero
+ @Published 
+ public
+ var center: CGPoint = .zero
+ 
+ @Published
+ public
+ var innerRadius: Double = 0
+ 
+ @Published
+ public
+ var innerStart: CGPoint = .zero
+ 
+ @Published
+ public
+ var innerEnd: CGPoint = .zero
+ 
+ @Published
+ public
+ var outerRadius: Double = 0
+ 
+ @Published
+ public
+ var outerStart: CGPoint = .zero
+ 
+ @Published
+ public
+ var outerEnd: CGPoint = .zero
 }
 
 extension VLArcPoints: Equatable
