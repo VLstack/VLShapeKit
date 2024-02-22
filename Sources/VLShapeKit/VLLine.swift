@@ -1,8 +1,15 @@
-//
-//  File.swift
-//  
-//
-//  Created by Laurent Vilday on 22/02/2024.
-//
+import SwiftUI
 
-import Foundation
+public
+struct VLLine: Shape
+{
+ public
+ func path(in rect: CGRect) -> Path
+ {
+  var path = Path()
+  path.move(to: CGPoint(x: 0, y: 0))
+  path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+
+  return path
+ }
+}

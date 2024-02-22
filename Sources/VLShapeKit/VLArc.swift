@@ -1,6 +1,7 @@
 // https://github.com/kieranb662/SwiftUI-Shapes/blob/master/Sources/Shapes/Triangles.swift
 import SwiftUI
 
+public
 struct VLArc: Shape
 {
  var startAngle: Angle
@@ -24,6 +25,7 @@ struct VLArc: Shape
                                                 set: { _ in })
  }
 
+ public
  func path(in rect: CGRect) -> Path
  {
   let pts = VLArcPoints()
@@ -75,96 +77,96 @@ struct VLArc: Shape
  }
 }
 
-#if DEBUG
-struct VLArcWrapper: View
-{
- @State private var startAngle: Double = 0
- @State private var endAngle: Double = 90
- @State private var thickness: Double = 20
- @State private var points = VLArcPoints()
- 
- var body: some View
- {
-  VStack
-  {
-   LabeledContent("Start")
-   {
-    Slider(value: $startAngle, in:0...90, step: 1)
-   }
-   LabeledContent("End")
-   {
-    Slider(value: $endAngle, in:0...90, step: 1)
-   }
-   LabeledContent("Thickness")
-   {
-    Slider(value: $thickness, in:1...100, step: 1)
-   }
-   
-   Grid()
-   {
-    GridRow
-    {
-     Text("center")
-     Text("\(points.center.x)")
-     Text("\(points.center.y)")
-    }
-    GridRow
-    {
-     Text("outerEnd")
-     Text("\(points.outerEnd.x)")
-     Text("\(points.outerEnd.y)")
-    }
-    GridRow
-    {
-     Text("outerStart")
-     Text("\(points.outerStart.x)")
-     Text("\(points.outerStart.y)")
-    }
-    GridRow
-    {
-     Text("innerEnd")
-     Text("\(points.innerEnd.x)")
-     Text("\(points.innerEnd.y)")
-    }
-    GridRow
-    {
-     Text("innerStart")
-     Text("\(points.innerStart.x)")
-     Text("\(points.innerStart.y)")
-    }
-   }
-   
-   ZStack
-   {
-    VLArc(startAngle: startAngle,
-          endAngle: endAngle,
-          thickness: thickness,
-          points: $points)
-     .fill(Color.red)
-    VLArc(startAngle: 90,
-          endAngle: 180,
-          thickness: 40)
-     .fill(Color.green)
-    VLArc(startAngle: 180,
-          endAngle: 270,
-          thickness: 60)
-     .fill(Color.blue)
-    VLArc(startAngle: 270,
-          endAngle: 0,
-          thickness: 80)
-     .fill(Color.purple)
-   }
-  }
-  .padding()
- }
-}
-
-struct VLArc_Previews: PreviewProvider
-{
- static var previews: some View
- {
-  VLArcWrapper()
- }
-}
-#endif
-
+//#if DEBUG
+//struct VLArcWrapper: View
+//{
+// @State private var startAngle: Double = 0
+// @State private var endAngle: Double = 90
+// @State private var thickness: Double = 20
+// @State private var points = VLArcPoints()
+// 
+// var body: some View
+// {
+//  VStack
+//  {
+//   LabeledContent("Start")
+//   {
+//    Slider(value: $startAngle, in:0...90, step: 1)
+//   }
+//   LabeledContent("End")
+//   {
+//    Slider(value: $endAngle, in:0...90, step: 1)
+//   }
+//   LabeledContent("Thickness")
+//   {
+//    Slider(value: $thickness, in:1...100, step: 1)
+//   }
+//   
+//   Grid()
+//   {
+//    GridRow
+//    {
+//     Text("center")
+//     Text("\(points.center.x)")
+//     Text("\(points.center.y)")
+//    }
+//    GridRow
+//    {
+//     Text("outerEnd")
+//     Text("\(points.outerEnd.x)")
+//     Text("\(points.outerEnd.y)")
+//    }
+//    GridRow
+//    {
+//     Text("outerStart")
+//     Text("\(points.outerStart.x)")
+//     Text("\(points.outerStart.y)")
+//    }
+//    GridRow
+//    {
+//     Text("innerEnd")
+//     Text("\(points.innerEnd.x)")
+//     Text("\(points.innerEnd.y)")
+//    }
+//    GridRow
+//    {
+//     Text("innerStart")
+//     Text("\(points.innerStart.x)")
+//     Text("\(points.innerStart.y)")
+//    }
+//   }
+//   
+//   ZStack
+//   {
+//    VLArc(startAngle: startAngle,
+//          endAngle: endAngle,
+//          thickness: thickness,
+//          points: $points)
+//     .fill(Color.red)
+//    VLArc(startAngle: 90,
+//          endAngle: 180,
+//          thickness: 40)
+//     .fill(Color.green)
+//    VLArc(startAngle: 180,
+//          endAngle: 270,
+//          thickness: 60)
+//     .fill(Color.blue)
+//    VLArc(startAngle: 270,
+//          endAngle: 0,
+//          thickness: 80)
+//     .fill(Color.purple)
+//   }
+//  }
+//  .padding()
+// }
+//}
+//
+//struct VLArc_Previews: PreviewProvider
+//{
+// static var previews: some View
+// {
+//  VLArcWrapper()
+// }
+//}
+//#endif
+//

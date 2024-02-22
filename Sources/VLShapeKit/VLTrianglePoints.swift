@@ -1,8 +1,34 @@
-//
-//  File.swift
-//  
-//
-//  Created by Laurent Vilday on 22/02/2024.
-//
+import SwiftUI
 
-import Foundation
+public
+class VLTrianglePoints: ObservableObject
+{
+ @Published var topMiddle: CGPoint = .zero
+ @Published var bottomRight: CGPoint = .zero
+ @Published var bottomLeft: CGPoint = .zero
+}
+
+
+extension VLTrianglePoints: Equatable
+{
+ public
+ static func == (lhs: VLTrianglePoints, rhs: VLTrianglePoints) -> Bool
+ {
+  return    lhs.topMiddle == rhs.topMiddle
+         && lhs.bottomRight == rhs.bottomRight
+         && lhs.bottomLeft == rhs.bottomLeft
+ }
+}
+
+//extension VLTrianglePoints: Hashable
+//{
+// func hash(into hasher: inout Hasher)
+// {
+//  hasher.combine(topMiddle.x)
+//  hasher.combine(topMiddle.y)
+//  hasher.combine(bottomRight.x)
+//  hasher.combine(bottomRight.y)
+//  hasher.combine(bottomLeft.x)
+//  hasher.combine(bottomLeft.y)
+// }
+//}
