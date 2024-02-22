@@ -30,6 +30,11 @@ class VLArcPoints: ObservableObject
  @Published
  public
  var outerEnd: CGPoint = .zero
+ 
+ public
+ init()
+ {
+ }
 }
 
 extension VLArcPoints: Equatable

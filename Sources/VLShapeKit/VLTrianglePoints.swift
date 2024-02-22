@@ -14,8 +14,12 @@ class VLTrianglePoints: ObservableObject
  @Published 
  public
  var bottomLeft: CGPoint = .zero
+ 
+ public
+ init()
+ {
+ }
 }
-
 
 extension VLTrianglePoints: Equatable
 {

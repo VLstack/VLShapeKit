@@ -10,6 +10,7 @@ struct VLArc: Shape
  var strokeWidth: CGFloat = 0
  @Binding var points: VLArcPoints
 
+ public
  init(startAngle: Double,
       endAngle: Double,
       thickness: CGFloat,

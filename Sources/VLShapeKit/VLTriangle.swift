@@ -8,6 +8,7 @@ struct VLTriangle: Shape
  var radiusTopMiddle: CGFloat
  @ObservedObject var points: VLTrianglePoints
  
+ public
  init(cornerRadius: CGFloat = 0,
       points: VLTrianglePoints? = nil)
  {
@@ -17,6 +18,7 @@ struct VLTriangle: Shape
   self.points = points ?? VLTrianglePoints()
  }
  
+ public
  init(bottomLeftRadius: CGFloat = 0,
       bottomRightRadius: CGFloat = 0,
       topMiddleRadius: CGFloat = 0,
