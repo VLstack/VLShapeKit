@@ -1,15 +1,13 @@
 import SwiftUI
 
-public
-struct VLLine: Shape
+public struct VLLine: Shape
 {
- public
- init()
- {
- }
+// public
+// init()
+// {
+// }
  
- public
- func path(in rect: CGRect) -> Path
+ public func path(in rect: CGRect) -> Path
  {
   var path = Path()
   path.move(to: CGPoint(x: 0, y: 0))

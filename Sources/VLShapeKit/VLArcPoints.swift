@@ -1,56 +1,42 @@
+import Foundation
 import SwiftUI
 
-public
-class VLArcPoints: ObservableObject
+@Observable
+public final class VLArcPoints: Identifiable, Sendable
 {
- @Published 
- public
- var center: CGPoint = .zero
+ public let id: String = UUID().uuidString
+
+ public var center: CGPoint = .zero
  
- @Published
- public
- var innerRadius: Double = 0
+ public var innerRadius: Double = 0
  
- @Published
- public
- var innerStart: CGPoint = .zero
+ public var innerStart: CGPoint = .zero
  
- @Published
- public
- var innerEnd: CGPoint = .zero
+ public var innerEnd: CGPoint = .zero
  
- @Published
- public
- var outerRadius: Double = 0
+ public var outerRadius: Double = 0
  
- @Published
- public
- var outerStart: CGPoint = .zero
+ public var outerStart: CGPoint = .zero
  
- @Published
- public
- var outerEnd: CGPoint = .zero
- 
- public
- init()
- {
- }
+ public var outerEnd: CGPoint = .zero
+// public init()
+// {
+// }
 }
 
-extension VLArcPoints: Equatable
-{
- public
- static func == (lhs: VLArcPoints, rhs: VLArcPoints) -> Bool
- {
-  return    lhs.center == rhs.center
-         && lhs.innerRadius == rhs.innerRadius
-         && lhs.innerStart == rhs.innerStart
-         && lhs.innerEnd == rhs.innerEnd
-         && lhs.outerRadius == rhs.outerRadius
-         && lhs.outerStart == rhs.outerStart
-         && lhs.outerEnd == rhs.outerEnd
- }
-}
+//extension VLArcPoints: Equatable
+//{
+// public static func == (lhs: VLArcPoints, rhs: VLArcPoints) -> Bool
+// {
+//  return    lhs.center == rhs.center
+//         && lhs.innerRadius == rhs.innerRadius
+//         && lhs.innerStart == rhs.innerStart
+//         && lhs.innerEnd == rhs.innerEnd
+//         && lhs.outerRadius == rhs.outerRadius
+//         && lhs.outerStart == rhs.outerStart
+//         && lhs.outerEnd == rhs.outerEnd
+// }
+//}
 
 //extension VLArcPoints: Hashable
 //{

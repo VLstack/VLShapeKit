@@ -1,36 +1,33 @@
+import Foundation
 import SwiftUI
 
-public
-class VLTrianglePoints: ObservableObject
+@Observable
+public final class VLTrianglePoints: Identifiable, Sendable
 {
- @Published 
- public
- var topMiddle: CGPoint = .zero
+ public let id: String = UUID().uuidString
+
+ public var topMiddle: CGPoint = .zero
  
- @Published
- public
- var bottomRight: CGPoint = .zero
+ public var bottomRight: CGPoint = .zero
  
- @Published 
- public
- var bottomLeft: CGPoint = .zero
+ public var bottomLeft: CGPoint = .zero
  
- public
- init()
- {
- }
+// public
+// init()
+// {
+// }
 }
 
-extension VLTrianglePoints: Equatable
-{
- public
- static func == (lhs: VLTrianglePoints, rhs: VLTrianglePoints) -> Bool
- {
-  return    lhs.topMiddle == rhs.topMiddle
-         && lhs.bottomRight == rhs.bottomRight
-         && lhs.bottomLeft == rhs.bottomLeft
- }
-}
+//extension VLTrianglePoints: Equatable
+//{
+// public
+// static func == (lhs: VLTrianglePoints, rhs: VLTrianglePoints) -> Bool
+// {
+//  return    lhs.topMiddle == rhs.topMiddle
+//         && lhs.bottomRight == rhs.bottomRight
+//         && lhs.bottomLeft == rhs.bottomLeft
+// }
+//}
 
 //extension VLTrianglePoints: Hashable
 //{
