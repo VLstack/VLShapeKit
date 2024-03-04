@@ -12,32 +12,12 @@ public final class VLTrianglePoints: Identifiable, Sendable
  
  public var bottomLeft: CGPoint = .zero
  
-// public
-// init()
-// {
-// }
+ public init(topMiddle: CGPoint = .zero,
+             bottomRight: CGPoint = .zero,
+             bottomLeft: CGPoint = .zero)
+ {
+  self.topMiddle = topMiddle
+  self.bottomRight = bottomRight
+  self.bottomLeft = bottomLeft
+ }
 }
-
-//extension VLTrianglePoints: Equatable
-//{
-// public
-// static func == (lhs: VLTrianglePoints, rhs: VLTrianglePoints) -> Bool
-// {
-//  return    lhs.topMiddle == rhs.topMiddle
-//         && lhs.bottomRight == rhs.bottomRight
-//         && lhs.bottomLeft == rhs.bottomLeft
-// }
-//}
-
-//extension VLTrianglePoints: Hashable
-//{
-// func hash(into hasher: inout Hasher)
-// {
-//  hasher.combine(topMiddle.x)
-//  hasher.combine(topMiddle.y)
-//  hasher.combine(bottomRight.x)
-//  hasher.combine(bottomRight.y)
-//  hasher.combine(bottomLeft.x)
-//  hasher.combine(bottomLeft.y)
-// }
-//}
