@@ -2,6 +2,8 @@ import SwiftUI
 
 public struct VLLine: Shape
 {
+ public init() {}
+ 
  public func path(in rect: CGRect) -> Path
  {
   var path = Path()
